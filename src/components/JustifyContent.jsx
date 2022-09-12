@@ -12,7 +12,7 @@ const JustifyContent = () => {
         <div className="flex justify-start space-x-4 font-mono text-white text-sm font-bold leading-6 bg-stripes-fuchsia rounded-lg">
           <div className="absolute z-1 top-8 right-8 text-gray-900 text-md rounded-md bg-gradient-to-r from-fuchsia-500 to-transparent">
             <p className="italic ml-3">[เขียนโค้ดที่ parent]</p>
-            <pre className="-mt-3 p-2 text-[16px]">
+            <pre className="-mt-2 px-2 text-[16px]">
               &lt;div className="flex justify-start ..."&gt;
               <br />
               {'  '}&lt;div className="..."&gt;child:01&lt;/div&gt;
