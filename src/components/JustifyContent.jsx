@@ -10,10 +10,14 @@ const JustifyContent = () => {
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]"></div>
       <div className="relative rounded-lg overflow-auto p-8">
         <div className="flex justify-start space-x-4 font-mono text-white text-sm font-bold leading-6 bg-stripes-fuchsia rounded-lg">
-          <div className="absolute z-1 top-8 right-8 text-gray-900 text-md rounded-md bg-gradient-to-r from-fuchsia-500 to-transparent">
+          <div className="absolute z-1 top-8 right-8 text-gray-600 text-md font-thin rounded-md bg-gradient-to-r from-fuchsia-500 to-transparent">
             <p className="italic ml-3">[เขียนโค้ดที่ parent]</p>
             <pre className="-mt-2 px-2 text-[16px]">
-              &lt;div className="flex justify-start ..."&gt;
+              &lt;div className="
+              <span className="italic text-gray-900">
+                flex justify-start ...
+              </span>
+              "&gt;
               <br />
               {'  '}&lt;div className="..."&gt;child:01&lt;/div&gt;
               <br />
@@ -82,7 +86,9 @@ const JustifyContent = () => {
           <div className="absolute -z-1 inset-0 left-80 text-gray-700 text-lg rounded-md">
             <pre>
               4. space-between{' '}
-              <span className="italic text-red-600">ใช้ทำ nav bar</span>
+              <span className="italic text-red-600 font-thin">
+                &lt;ใช้ทำ nav bar&gt;
+              </span>
             </pre>
           </div>
           <div className="w-20 h-20 rounded-lg flex items-center justify-center bg-pink-500 shadow-lg">
@@ -135,7 +141,7 @@ const JustifyContent = () => {
         </div>
       </div>
 
-      <div className="font-mono pl-8 my-8 text-red-500">
+      <div className="font-mono italic pl-8 my-8 text-red-600">
         <p>
           ***ใช้คำสั่ง justify-content ตรง parent เพื่อจัดกลุ่ม children <br />
         </p>
