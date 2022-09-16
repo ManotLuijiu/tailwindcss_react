@@ -4,12 +4,14 @@ const JustifyItems = () => {
   return (
     <>
       <div className="mt-4 -mb-3">
-        <div className="not-prose relative bg-slate-50 rounded-xl overflow-hidden dark:bg-slate-800/25">
+        <div className="not-prose relative bg-slate-50 rounded-xl overflow-hidden dark:bg-slate-800">
           <article className="group flex flex-col mx-auto text-center whitespace-pre-wrap font-mono mb-6">
             <h1 className="text-[48px]">justify-items</h1>
-            <p>ใช้สำหรับวางตำแหน่ง children ที่อยู่ใน grid (Horizontal)</p>
+            <p>
+              ใช้สำหรับวางตำแหน่ง children ที่อยู่ใน grid (Massive Horizontal)
+            </p>
           </article>
-          <div className="absolute inset-0 bg-grid-slate-100 mask1 dark:bg-grid-slate-700 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1), rgba(255,255,255,0.5))] bg-justify-items"></div>
+          <div className="absolute inset-0 bg-grid-slate-100 mask1 dark:bg-grid-slate-700 dark:mask2 bg-justify-items"></div>
           <div className="relative rounded-xl overflow-auto p-8">
             <div className="grid grid-cols-3 gap-4 font-mono text-white text-sm font-bold leading-6">
               <div className="absolute -z-1 top-0 left-10 text-gray-700 text-lg rounded-md">
@@ -19,10 +21,12 @@ const JustifyItems = () => {
                 <div className="w-20 h-20 rounded-lg flex items-center justify-center bg-sky-500 shadow-lg">
                   01
                 </div>
-                {/* <div className="w-20 h-20 rounded-lg flex items-center justify-center bg-sky-500 shadow-lg">
-                  01.2
-                </div> */}
               </div>
+              {/* <div className="bg-stripes-sky grid rounded-lg justify-items-start">
+                <div className="w-20 h-20 rounded-lg flex items-center justify-center bg-sky-500 shadow-lg">
+                  01
+                </div>
+              </div> */}
               <div className="absolute -z-1 top-0 left-[280px] text-gray-700 text-lg rounded-md">
                 <pre>2. end</pre>
               </div>
@@ -82,6 +86,28 @@ const JustifyItems = () => {
               <div className="h-20 rounded-lg flex items-center justify-center bg-blue-500 shadow-lg">
                 03
               </div>
+            </div>
+            {/* show code */}
+            <div className="text-gray-600 text-md font-thin rounded-md bg-gradient-to-r from-pink-500 to-transparent my-2">
+              <p className="italic ml-6 pt-3">
+                [เขียนโค้ดที่ parent มีผลต่อทุก child]
+              </p>
+              <pre className="mx-3 px-3 pb-3 text-[16px]">
+                &lt;div className="
+                <span className="italic text-gray-900">
+                  grid justify-items-stretch ...
+                </span>
+                "&gt;
+                <br />
+                {'  '}&lt;div className="..."&gt;01&lt;/div&gt; // ค่าดีฟอลท์
+                justify-self-auto
+                <br />
+                {'  '}&lt;div className="..."&gt;02&lt;/div&gt;
+                <br />
+                {'  '}&lt;div className="..."&gt;03&lt;/div&gt;
+                <br />
+                &lt;/div&gt;
+              </pre>
             </div>
           </div>
         </div>
